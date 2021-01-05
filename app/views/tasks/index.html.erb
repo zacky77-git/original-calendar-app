@@ -34,7 +34,7 @@
             <td><%= check_box_tag :completed %></td>
             <td><%= link_to task.title, task_path(task) %></td>
             <td><%= task.description %></td>
-            <td><%= task.target_at%></td>
+            <td><%= task.target_on %></td>
             <td><%= link_to 'Edit', edit_task_path(task) %></td>
             <td><%= link_to 'Delete', task_path(task), method: :delete %></td>
         

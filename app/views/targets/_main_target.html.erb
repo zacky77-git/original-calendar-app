@@ -19,7 +19,11 @@
   <p id="notice"><%= notice %></p>
 
   <table class=main_hed>
-    
+     <%= form_with(model: @user_target, url: targets_path, method: :get, local: true) do |f| %>
+      <%= f.label :日付設定  %>
+      <%= f.date_field :date,  value: Time.now.strftime("%Y-%m-%d")%>
+      <%= f.submit '変更', class: "form-submit" %>
+     <%end%>
   </table>
   
 
@@ -29,7 +33,6 @@
     <th>今月の目標</th>
     <td><%= monthly_target.monthly_content %></td>
     <td><%= link_to 'Edit', edit_target_path(monthly_target.id) %></td>
-    <td><%= link_to 'Destroy', target_path(monthly_target.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </div>
 
@@ -38,7 +41,6 @@
     <th>今週の目標</th>
     <td><%= weekly_target.weekly_content %></td>
     <td><%= link_to 'Edit', edit_target_path(weekly_target.id) %></td>
-    <td><%= link_to 'Destroy', target_path(weekly_target.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </div>
 
@@ -47,7 +49,6 @@
     <th>今日の目標</th>
     <td><%= daily_target.daily_content %></td>
     <td><%= link_to 'Edit', edit_target_path(daily_target.id) %></td>
-    <td><%= link_to 'Destroy', target_path(daily_target.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </div>
 

@@ -42,7 +42,7 @@
   <%= form_with(model: @diary, url: diary_index_path, method: :post, local: true, class: 'form') do |f| %>
   <div class="diary-hed" >
     <%= f.label :日付, class: 'diary-lavel' %>
-    <%= f.date_field :start_time, class: 'date-select' %>
+    <%= f.date_field :start_time, value: Time.now.strftime("%Y-%m-%d"), class: 'date-select' %>
     <%= f.label :タイトル, class: 'diary-lavel' %>
     <%= f.text_field :title, class: 'text-input' %>
     <%= f.submit '保存', class: "form-submit" %>

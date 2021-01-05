@@ -1,0 +1,114 @@
+<div class="chat-header">
+ <div class="left-header">
+    <div class="header-title">
+
+          <h1></h1>
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+    <%= link_to "diary", diary_index_path %>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="calendars">
+  <p id="notice"><%= notice %></p>
+
+  <table class=main_hed>
+
+
+  </table>
+  
+
+  <br>
+  <div>
+    <%  @monthly_target.each do |monthly_target| %>
+    <th>今月の目標</th>
+    <td><%= monthly_target.monthly_content %></td>
+    <td><%= link_to 'Edit', edit_target_path(monthly_target.id) %></td>
+    <% end %>
+  </div>
+
+  <div>
+    <%  @weekly_target.each do |weekly_target| %>
+    <th>今週の目標</th>
+    <td><%= weekly_target.weekly_content %></td>
+    <td><%= link_to 'Edit', edit_target_path(weekly_target.id) %></td>
+    <% end %>
+  </div>
+
+  <div>
+    <% @daily_target.each do |daily_target| %>
+    <th>今日の目標</th>
+    <td><%= daily_target.daily_content %></td>
+    <td><%= link_to 'Edit', edit_target_path(daily_target.id) %></td>
+    <% end %>
+  </div>
+
+  
+  <table>
+    <tr>
+      <th>完了/</th><th>タイトル/</th><th>内容/</th><th>締め切り</th><th></th><th></th>
+    </tr>
+    <% @tasks.each do |task| %>
+    
+      <div>
+        <tr>
+          <td><%= check_box_tag :completed %></td>
+          <td><%= link_to task.title, task_path(task) %></td>
+          <td><%= task.description %></td>
+          <td><%= task.target_on %></td>
+          <td><%= link_to 'Edit', edit_task_path(task) %></td>
+          <td><%= link_to 'Delete', task_path(task), method: :delete %></td>
+      
+        </tr>
+      </div>
+    <% end %>
+  </table>
+
+  <div class="calendars">
+    <p id="notice"><%= notice %></p>
+
+    <table class=main_hed>
+      <thead>
+        <tr>
+          <th>直近の予定</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%  @index_events.each do |event| %>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= l (event.start_time) %></td>
+            <td><%= l (event.end_time) %></td>
+            <td><%= link_to 'Show', event %></td>
+            <td><%= link_to 'Edit', edit_event_path(event) %></td>
+            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+
+    <br>
+
+
+
+    <%= calendar(number_of_days: 3, events: @events) do | date, events | %>
+    <%#= calendar events: @events do |date, events| %>
+      <%= date.day %>
+
+      <% events.each do |event| %>
+        <div>
+          <%= link_to event.title, event_path(event.id) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

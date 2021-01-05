@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_01_04_004233) do
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
-    t.datetime "target_at"
+    t.date "target_on"
     t.datetime "completed_at"
     t.boolean "completed", default: false, null: false
     t.bigint "user_id"
