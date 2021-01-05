@@ -23,12 +23,21 @@
   </div>
   <div class="menu-content">
     <p>直近の予定</p>
-      
+        <% @index_events.each do |event| %>
+        <p>
+         <%= link_to event.title,event %>
+
+        </p>
+      <% end %>
   </div>
 
   <div class="menu-content">
     <p>最近の日記</p>
-
+      <% @index_diaries.each do |diary| %>
+        <p>
+          <%= link_to diary.title, diary_path(diary.id) %>
+        </p>
+      <% end %>
   </div>
 
 
