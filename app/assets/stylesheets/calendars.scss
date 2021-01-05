@@ -1,0 +1,179 @@
+// Place all the styles related to the calendars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.wrapper {
+  display: flex;
+}
+/* サイドバー */
+.side-bar {
+  /* background-color: #253141; */
+  background-color: ivory; /*変更*/
+  width: 300px;
+  height: 100vh;
+  border-right : 2px solid darkseagreen; /* 追加 */
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  /* background-color: #253141; */
+  background-color: ivory  ; /*変更*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid darkseagreen; /* 追加 */
+}
+
+.header-name a{
+  font-size: 16px;
+  /* color: #FAFAFA; */
+  color: darkseagreen;
+  text-decoration: none;
+}
+.create-room {
+  font-size: 10px;
+}
+
+.create-room a {
+  /* border: 1px solid lightblue; */
+  border: 1px solid darkseagreen;
+  padding: 14px;
+  /* color: deepskyblue; */
+  color: darkseagreen; /* 追加 */
+  text-decoration: none;
+}
+
+.menu {
+  /* background-color: #2f3e51; */
+  background-color: rgb(255, 255, 183) ; /* 追加 */
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.room {
+  padding: 20px 0 40px;
+}
+
+.menu-calendar{
+  padding: 20px 0 40px;
+}
+
+.room-name a {
+  text-decoration: none;
+  /* color: white; */
+  color: darkseagreen; /* 追加 */
+}
+
+/* メイン */
+
+
+
+body {
+  background-color: rgb(114, 151, 161);
+}
+
+.calendar {
+  width: calc(100vw - 300px);
+  margin-top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.diary-show-content{
+  width: calc(100vw - 300px);
+  margin: auto;
+  
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+}
+// .main_hed{
+  // height: 150px;
+  // overflow: scroll;
+// }
+
+.item {
+  margin: 0.5vw;
+  border: medium solid rgb(0, 0, 0);
+  width: 10vw;
+  height: auto;
+  background-color: rgb(246, 253, 255);
+}
+
+.date {
+  height: 5vh;
+  display: flex;
+  font-size:  4vhw;
+  align-items: center;
+  justify-content: center;
+  // border-bottom: medium solid rgb(0, 0, 0);
+  border-bottom: medium solid darkseagreen;
+}
+
+.content {
+  min-height: 25vh;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.plan-list {
+  margin: 1vh 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 15vh; */
+}
+
+.lavel {
+  font-size: 3vh;
+  color: rgb(255, 255, 255);
+
+}
+
+.text-input {
+  height: 3vh;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.date-select {
+  height: 3vh;
+  width: 13vw;
+  margin: 0 2vw;
+}
+
+.simple-calendar {
+  .day {
+
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {
+  }
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
+}

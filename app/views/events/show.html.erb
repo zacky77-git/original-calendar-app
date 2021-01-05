@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "events/side_bar" %>
+  </div>
+  <div class="chat">
+
+    <div class="chat-header">
+      <div class="header-title">
+        <%= @event.title %>
+      </div>  
+      <div class="header-button">
+        <%= link_to 'Destroy', event_path(@event.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+
+
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Name:</strong>
+    <%= @event.title %>
+  </p>
+
+  <p>
+    <strong>Start time:</strong>
+    <%= @event.start_time %>
+  </p>
+
+  <p>
+    <strong>End time:</strong>
+    <%= @event.end_time %>
+  </p>
+  <p>
+    <strong>location:</strong>
+    <%= @event.location %>
+  </p>
+
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+</div>

@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "events/side_bar" %>
+  </div>
+  <div class="chat">
+
+  <div class="chat-header">
+    <div class="left-header">
+      <div class="header-title">
+        <h1>Tasks</h1>
+      </div>
+    </div>
+    <div class="right-header">
+      <div class="header-button">
+      
+      </div>
+    </div>
+  </div>
+
+    <table>
+      <tr>
+        <th>Title</th>
+        <td><%= @task.title %></td></tr>
+      <tr>
+        <th>Description</th>
+        <td><%= @task.description %></td>
+      </tr>
+      <tr>
+        <th>User.Email</th>
+        <td><%= @task.user.email %></td>
+      </tr>
+    </table>
+    <p><%= link_to '一覧に戻る', tasks_url %></p>
+  </div>
+</div>

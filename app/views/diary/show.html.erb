@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "events/side_bar" %>
+  </div>
+  <div class="chat">
+
+    <div class="chat-header">
+      <div class="header-title">
+        <%= @diary.title %>
+      </div>  
+      <div class="header-button">
+        <%= link_to 'Destroy',diary_path(@diary.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+      </div>
+
+    </div>
+    <p id="notice"><%= notice %></p>
+  <div class="diary-show-content">
+    <p>
+      <strong>タイトル</strong>
+      <%= @diary.title %>
+    </p>
+
+    <p>
+      <strong>日付</strong>
+      <%= l @diary.start_time %>
+    </p>
+
+    <p>
+      <strong>内容</strong>
+      <%= @diary.content %>
+    </p>
+
+    <%= link_to 'Edit', edit_diary_path(@diary) %> |
+
+    <%= link_to 'Back', diary_path %>
+  </div>
+
+</div>

@@ -1,0 +1,107 @@
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+
+
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: darkseagreen;
+  padding: 0 15px;
+  // border: 1px solid darkseagreen; 
+  text-decoration: none;
+
+  &:visited {
+    color:darkseagreen;
+  }
+
+  &:hover {
+    color: lemonchiffon;
+    background-color:darkseagreen;
+  }
+}
+
+
+th {
+  padding-bottom: 5px;
+  
+  &:Sat {
+    color: blue;
+  }
+}
+
+
+
+td {
+  padding: 0 5px 7px;
+  color: darkseagreen;
+
+  &:link {
+    color: lemonchiffon;
+    background-color:darkseagreen;
+  }
+}
+
+div {
+  &.field {
+    margin-bottom: 10px;
+  }
+
+  &.actions{
+    margin-bottom: 10px;
+    // background-color: lemonchiffon; /* 追加 */
+  border: none;
+  /* color: white; */
+  color: darkseagreen; /* 追加 */
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}

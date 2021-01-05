@@ -1,0 +1,28 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+  </div>
+  <div class="create-room">
+    <%= link_to "日記を書く", new_diary_path %>
+  </div>
+</div>
+
+
+<div class="menu">
+
+      <div class="menu-calendar">
+        <p>  カレンダー <p>
+        <p><%= link_to "diarys",  diary_index_path %><p>
+        <p><%= link_to "events",   events_path %><p>
+      </div>
+
+
+
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <%= link_to room.name, room_messages_path(room) %>
+      </div>
+    </div>
+  <% end %>
+</div>

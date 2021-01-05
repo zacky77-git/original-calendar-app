@@ -1,0 +1,37 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+  </div>
+  <div class="create-room">
+    <%= link_to "トップページ", events_path %>
+  </div>
+</div>
+
+
+<div class="menu">
+
+      <div class="menu-content">
+        <p>  カレンダー <p>
+        <p><%= link_to "diaries",  diary_index_path %><p>
+        <p><%= link_to "events",   events_path %><p>
+      </div>
+  <div class="menu-content">
+        <p><%= link_to "ToDo", tasks_path %><p>
+  </div>
+  <div class="menu-content">
+        <p><%= link_to "目標", targets_path %><p>
+  </div>
+  <div class="menu-content">
+    <p>直近の予定</p>
+      
+  </div>
+
+  <div class="menu-content">
+    <p>最近の日記</p>
+
+  </div>
+
+
+
+ 
+</div>

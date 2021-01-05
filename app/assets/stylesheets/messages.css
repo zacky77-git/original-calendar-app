@@ -1,0 +1,285 @@
+.wrapper {
+  display: flex;
+  background-color: ivory;
+}
+/* サイドバー */
+.side-bar {
+  /* background-color: #253141; */
+  background-color:  #ffffb7;; /*変更*/
+  width: 300px;
+  /* height: 100vh; */
+  /* display: block; */
+  border-right : 2px solid darkseagreen; /* 追加 */
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  /* background-color: #253141; */
+  background-color: ivory  ; /*変更*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid darkseagreen; /* 追加 */
+}
+
+.header-name a{
+  font-size: 16px;
+  /* color: #FAFAFA; */
+  color: darkseagreen;
+  text-decoration: none;
+}
+
+.create-room {
+  font-size: 10px;
+}
+
+.create-room a {
+  /* border: 1px solid lightblue; */
+  border: 1px solid darkseagreen;
+  padding: 14px;
+  /* color: deepskyblue; */
+  color: darkseagreen; /* 追加 */
+  text-decoration: none;
+}
+
+.rooms {
+  /* background-color: #2f3e51; */
+  background-color: rgb(255, 255, 183) ; /* 追加 */
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.room {
+  padding: 20px 0 40px;
+}
+
+.menu-content {
+  padding: 20px 0;
+}
+
+.room-name a {
+  text-decoration: none;
+  /* color: white; */
+  color: darkseagreen; /* 追加 */
+}
+
+/* メイン */
+.calendars{
+  width: calc(100vw - 300px);
+  /* height: calc(100vh - 100px - 500px); */
+}
+
+.chat {
+  /* background-color: #FFFFFF; */
+  background-color: ivory;
+  width: calc(100vw - 300px);
+}
+
+.chat-header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  border-bottom: 1px solid darkseagreen; /* 追加 */
+}
+
+.header-title {
+  font-size: 24px;
+  /* color: #333; */
+  color: darkseagreen; /* 追加 */
+  /* margin-top: 36px; */
+}
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  padding: 20px;
+  /* color: darkred; */
+  color: darkseagreen; /* 追加 */
+  /* border: 1px solid darkred; */
+  border: 1px solid darkseagreen; /* 追加 */
+  text-decoration: none;
+}
+
+
+.messages {
+  background-color: #FAFAFA;
+  background-color:lightcyan;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message {
+  margin: 10px 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  /* margin-top: 10px; */
+}
+
+.message-content {
+  /* color: #434a54; */
+  color: darkseagreen;
+  font-size: 14px;
+  margin-bottom: 40px; /* 追加 */
+  
+}
+
+.form {
+  /* background-color: #DDDDDD; */
+  background-color: darkseagreen; /* 追加 */
+  height: 500px;
+  display: flex;
+  border-top: 1px solid darkseagreen; /* 追加 */
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.diary-hed{
+  height: 100px;
+  width: 800px;
+  margin: 20px  auto;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+
+.diary-content{
+  margin: 0 auto ;
+  width: 800px;
+  height: 300px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.evemt-title {
+  margin: 80px 0 0 0; 
+}
+
+.diary-lavel{
+  width: 160px;
+  font-size: 30px;
+  color: white;
+  margin: 0 auto;
+  padding: 10 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.diary-text{
+  width: 800px;
+  height: 250px;
+  overflow: scroll;
+}
+
+.event-content {
+  background-color: darkseagreen; /* 追加 */
+  height: 500px;
+  border-top: 1px solid darkseagreen; /* 追加 */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+}
+
+.event-lavel {
+  width: 160px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  
+}
+
+.form-input {
+  
+  background-color: white;
+  display: flex;
+  width: 100%;
+  border: 1px solid darkseagreen; /* 追加 */
+}
+.event-form{
+  width: 500px;
+  height: 80px;
+  margin: 10px auto;
+  display: flex;
+}
+.event-form-submit{
+  width: 500px;
+  height: 80px;
+  margin: 10px auto;
+  padding: 0 0 0 160px;
+  display: flex;
+}
+
+.event-form-btn{
+  width: 72px;
+  /* width: calc(100vw - 300px); */
+  margin: 30px auto ;
+   /* background-color: #38AEF0; */
+  background-color: lemonchiffon; /* 追加 */ 
+  border: none;
+  /* color: white; */
+  color: darkseagreen; /* 追加 */
+  font-size: 16px;
+  height: 50px;
+  /* margin-left: 15px; */
+  padding: 0 20px;
+  display: block;
+}
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  /* background-color: #38AEF0; */
+  background-color: lemonchiffon; /* 追加 */
+  border: none;
+  /* color: white; */
+  color: darkseagreen; /* 追加 */
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.select{
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,63 @@
+<div class="chat-header">
+ <div class="left-header">
+    <div class="header-title">
+
+          <h1>目標</h1>
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+    <%= link_to "新規目標", new_target_path %>
+    <%# "チャットを終了する"をクリックすると、チャットルームが削除されるようにリンクを設定 削除のパスはroom_path 削除するチャットルームを区別するために、定義している@roomを引数にし、HTTPメソッドのdeleteを指定すると、roomsコントローラーのdestroyアクションが実行されます。 %>
+      <%# <%= link_to "チャットを終了する", room_path(@room), method: :delete %> 
+    </div>
+  </div>
+</div>
+
+
+<div class="calendars">
+  <p id="notice"><%= notice %></p>
+
+  <table class=main_hed>
+    
+  </table>
+  
+
+  <br>
+  <div>
+    <%  @monthly_target.each do |monthly_target| %>
+    <th>今月の目標</th>
+    <td><%= monthly_target.monthly_content %></td>
+    <td><%= link_to 'Edit', edit_target_path(monthly_target.id) %></td>
+    <td><%= link_to 'Destroy', target_path(monthly_target.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </div>
+
+  <div>
+    <%  @weekly_target.each do |weekly_target| %>
+    <th>今週の目標</th>
+    <td><%= weekly_target.weekly_content %></td>
+    <td><%= link_to 'Edit', edit_target_path(weekly_target.id) %></td>
+    <td><%= link_to 'Destroy', target_path(weekly_target.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </div>
+
+  <div>
+    <% @daily_target.each do |daily_target| %>
+    <th>今日の目標</th>
+    <td><%= daily_target.daily_content %></td>
+    <td><%= link_to 'Edit', edit_target_path(daily_target.id) %></td>
+    <td><%= link_to 'Destroy', target_path(daily_target.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+
+

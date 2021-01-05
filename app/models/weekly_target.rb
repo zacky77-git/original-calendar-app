@@ -1,0 +1,3 @@
+class WeeklyTarget < ApplicationRecord
+  
+end
