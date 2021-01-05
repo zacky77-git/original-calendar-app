@@ -1,7 +1,9 @@
 class CreateWeeklyTargets < ActiveRecord::Migration[6.0]
   def change
     create_table :weekly_targets do |t|
-      t.string :weekly_content
+      t.string :weekly_content,default: ''
+      t.date :date
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end

@@ -1,52 +1,103 @@
-# テーブル設計
+# README
 
 ## users テーブル
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
+| Column               | Type   | Options     |
+| -------------------- | ------ | ----------- |
+| email                | string | null: false unique: true |
+| encrypted_password   | string | null: false |
+| nickname             | string | null: false |
 
 ### Association
 
-- has_many :room_users
-- has_many :rooms, through: room_users
-- has_many :messages
+- has_many :events
+- has_many :diaries
+- has_many :tasks
+- has_many :monthly_targets
+- has_many :weekly_targets
+- has_many :daily_targets
 
-## rooms テーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
 
-### Association
+## events テーブル
 
-- has_many :room_users
-- has_many :users, through: room_users
-- has_many :messages
-
-## room_users テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| start_time        | datetime    | null: false                    |
+| end_time     | datetime    | null: false                    |
+| location          | text       |                   |
+| user           | references | null: false, foreign_key: true |
 
 ### Association
-
-- belongs_to :room
 - belongs_to :user
 
-## messages テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | string     |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+## diaries テーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| title | string     | null: false,                   |
+| content   |text   | null: false                    |
+| start_time  | datetime     | null: false,                   |
+| user     | references | null: false, foreign_key: true |
+| date     | date | null: false, unique: true |
 
 ### Association
 
-- belongs_to :room
 - belongs_to :user
+
+
+
+## tasks テーブル
+
+| Orders    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| title      | string| null: false |
+| description     | text | null: false |
+| target_on      | datetime  | null: false |
+| completed_at     | datetime  | null: false |
+| completed     | boolean | null: false |
+| user     | references | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs_to :user
+
+## monthly_targets テーブル
+
+| Orders    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| content      | string| null: false |
+| user     | references | null: false, foreign_key: true |
+| date     | date | null: false |
+
+### Association
+
+- belongs_to :user
+
+## weekly_targets テーブル
+
+| Orders    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| content      | string| null: false |
+| user     | references | null: false, foreign_key: true |
+| date     | date | null: false |
+
+### Association
+
+- belongs_to :user
+
+## daily_targets テーブル
+
+| Orders    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| content      | string| null: false |
+| user     | references | null: false, foreign_key: true |
+| date     | date | null: false |
+
+### Association
+
+- belongs_to :user
+

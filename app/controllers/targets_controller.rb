@@ -16,7 +16,7 @@ class TargetsController < ApplicationController
   end
   
   def create
-    binding.pry
+    # binding.pry
     @user_target = UserTarget.new(target_params)
     @user_target.save
     # @monthly_target = MonthlyTarget.new(monthly_target_params)
