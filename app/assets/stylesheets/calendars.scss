@@ -10,19 +10,12 @@
   background-color: ivory; /*変更*/
   width: 300px;
   height: 100vh;
-  border-right : 2px solid darkseagreen; /* 追加 */
+  border-right : 2px double darkseagreen; /* 追加 */
+
+
 }
 
-.side-bar-header {
-  height: 100px;
-  padding: 0 20px;
-  /* background-color: #253141; */
-  background-color: ivory  ; /*変更*/
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid darkseagreen; /* 追加 */
-}
+
 
 .header-name a{
   font-size: 16px;
@@ -48,6 +41,7 @@
   background-color: rgb(255, 255, 183) ; /* 追加 */
   height: calc(100vh - 100px);
   padding: 0 20px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5) inset;
 }
 
 .room {
@@ -69,7 +63,7 @@
 
 
 body {
-  background-color: rgb(114, 151, 161);
+  background-color: rgb(143,188,143);
 }
 
 .calendar {
@@ -152,6 +146,8 @@ body {
 }
 
 .simple-calendar {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+
   .day {
 
   }

@@ -1,0 +1,38 @@
+<h1>目標設定</h1>
+
+<%= form_with(model: [@monthly_target, @weekly_target, @daily_target], target_path(@monthly_target.id, @weekly_target.id, @daily_target.id), method: :post, local: true) do |form| %>
+  <%#= form_with(model: @monthly_target, local: true) do |form| %>
+    <h1>月間目標</h1>
+    <div class="field">
+      <%= form.label :monthly_content, "月間目標" %>
+      <%= form.text_field :monthly_content %>
+    </div>
+    <div class="actions">
+      <%#= form.submit "送信" %>
+    </div>
+  <%# end %>
+
+  <%#= form_with(model: @weekly_target , local: true) do |form| %>
+    <h1>週間目標</h1>
+    <div class="field">
+    <%= form.label :weekly_content, "週間目標" %>
+    <%= form.text_field :weekly_content %>
+  </div>
+  <div class="actions">
+      <%#= form.submit "送信" %>
+    </div>
+  <%# end %>
+  
+  <%#= form_with(model: @daily_target, local: true) do |form| %>
+    <h1>日間目標</h1>
+    <div class="field">
+      <%= form.label :daily_content, "日間目標" %>
+      <%= form.text_field :daily_content %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "送信" %>
+    </div>
+<% end %>
+
+<%= link_to 'Back', targets_path %>

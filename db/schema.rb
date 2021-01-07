@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_01_04_004233) do
 
   create_table "daily_targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "daily_content", default: ""
-    t.date "date"
+    t.date "date_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_01_04_004233) do
 
   create_table "monthly_targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "monthly_content", default: ""
-    t.date "date"
+    t.integer "month_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_01_04_004233) do
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
-    t.datetime "target_at"
+    t.date "target_on"
     t.datetime "completed_at"
     t.boolean "completed", default: false, null: false
     t.bigint "user_id"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2021_01_04_004233) do
 
   create_table "weekly_targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "weekly_content", default: ""
-    t.date "date"
+    t.integer "week_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

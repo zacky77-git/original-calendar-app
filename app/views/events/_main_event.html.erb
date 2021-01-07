@@ -21,7 +21,7 @@
   <table class=main_hed>
     <thead>
       <tr>
-        <th>直近の予定</th>
+        <h6>直近の予定</h6>
 
         <th colspan="3"></th>
       </tr>
@@ -78,9 +78,9 @@
   <% end %>
 
   <div class="event-content" >
-    <div class="event-form">
+    <div class="event-form form-group">
       <%= f.label :title, class: 'event-lavel', id: 'evemt-title'%>
-      <%= f.text_field :title, class: 'text-input' %>
+      <%= f.text_field :title, class: 'text-input form-control' %>
     </div>
     <div class="event-form">
       <%= f.label :start_time, class: 'event-lavel' %>
@@ -92,10 +92,10 @@
     </div>
     <div class="event-form">
     <%= f.label :location, class: 'event-lavel' %>
-    <%= f.text_field :location, class: 'text-input'%>
+    <%= f.text_field :location, class: 'text-input form-control'%>
     </div>
     <div class="event-form-submit">
-      <%= f.submit '保存', class: "event-form-btn" %>
+      <%= f.submit '保存', class: "btn btn-default event-form-btn" %>
     </div>
 
   </div>

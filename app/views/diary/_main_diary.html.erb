@@ -1,15 +1,13 @@
 <div class="chat-header">
  <div class="left-header">
     <div class="header-title">
-    <%# チャットルーム名を表示 %>
-      <%# <%= @room.name %> 
+
             <h1>diary</h1>      
     </div>
   </div>
   <div class="right-header">
     <div class="header-button">
-    <%# "チャットを終了する"をクリックすると、チャットルームが削除されるようにリンクを設定 削除のパスはroom_path 削除するチャットルームを区別するために、定義している@roomを引数にし、HTTPメソッドのdeleteを指定すると、roomsコントローラーのdestroyアクションが実行されます。 %>
-      <%# <%= link_to "チャットを終了する", room_path(@room), method: :delete %> 
+ 
     </div>
   </div>
 </div>
@@ -40,15 +38,15 @@
 
 
   <%= form_with(model: @diary, url: diary_index_path, method: :post, local: true, class: 'form') do |f| %>
-  <div class="diary-hed" >
+  <div class="diary-hed form-group" >
     <%= f.label :日付, class: 'diary-lavel' %>
-    <%= f.date_field :start_time, class: 'date-select' %>
+    <%= f.date_field :start_time, value: Time.now.strftime("%Y-%m-%d"), class: 'date-select form-control' %>
     <%= f.label :タイトル, class: 'diary-lavel' %>
-    <%= f.text_field :title, class: 'text-input' %>
-    <%= f.submit '保存', class: "form-submit" %>
+    <%= f.text_field :title, class: 'text-input form-control' %>
+    <%= f.submit '保存', class: "btn btn-default form-submit" %>
   </div>
 
-    <div class="diary-content">
+    <div class="diary-content form-group">
       <%= f.label :content, class: 'diary-lavel' %>
       <%= f.text_area :content, class: "diary-text" %>
     </div>

@@ -7,9 +7,9 @@
   /* background-color: #253141; */
   background-color:  #ffffb7;; /*変更*/
   width: 300px;
-  /* height: 100vh; */
+  height: auto;
   /* display: block; */
-  border-right : 2px solid darkseagreen; /* 追加 */
+  border-right : 2px double darkseagreen; /* 追加 */
 }
 
 .side-bar-header {
@@ -20,7 +20,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid darkseagreen; /* 追加 */
+  border-bottom: 1px double darkseagreen; /* 追加 */
+  margin: auto;
+
 }
 
 .header-name a{
@@ -41,6 +43,7 @@
   /* color: deepskyblue; */
   color: darkseagreen; /* 追加 */
   text-decoration: none;
+  box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.5);
 }
 
 .rooms {
@@ -82,18 +85,20 @@
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  border-bottom: 1px solid darkseagreen; /* 追加 */
+  border-bottom: 2px double darkseagreen; /* 追加 */
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
 }
 
 .header-title {
   font-size: 24px;
   /* color: #333; */
   color: darkseagreen; /* 追加 */
-  /* margin-top: 36px; */
+  margin-top: 36px;
 }
 
 .header-button {
   margin-top: 40px;
+
 }
 
 .header-button a {
@@ -103,6 +108,7 @@
   /* border: 1px solid darkred; */
   border: 1px solid darkseagreen; /* 追加 */
   text-decoration: none;
+  box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.5);
 }
 
 
@@ -154,6 +160,7 @@
   display: block;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
 }
 
 .diary-hed{
@@ -172,6 +179,10 @@
 
   justify-content: center;
   align-items: center;
+}
+
+.diary-edit{
+  margin-top: 30vh;
 }
 
 .evemt-title {

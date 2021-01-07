@@ -1,23 +1,41 @@
-<%= form_with(model: @diary, local: true) do |form| %>
 
-  <div class="title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "top/side_bar" %>
+  </div>
+  <div class="chat">
+  
+<div class="chat-header">
+ <div class="left-header">
+    <div class="header-title">
+
+            <h1>diary編集</h1>      
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+ 
+    </div>
+  </div>
+</div>
+
+
+
+  <%= form_with(model: @diary, url: diary_index_path, method: :post, local: true, class: 'form diary-edit') do |f| %>
+  <div class="diary-hed form-group" >
+    <%= f.label :日付, class: 'diary-lavel' %>
+    <%= f.date_field :start_time, value: Time.now.strftime("%Y-%m-%d"), class: 'date-select form-control' %>
+    <%= f.label :タイトル, class: 'diary-lavel' %>
+    <%= f.text_field :title, class: 'text-input form-control' %>
+    <%= f.submit '保存', class: "btn btn-default form-submit" %>
   </div>
 
-    <div class="time">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
+    <div class="diary-content form-group">
+      <%= f.label :content, class: 'diary-lavel' %>
+      <%= f.text_area :content, class: "diary-text" %>
+    </div>
+  <% end %>
+
+
   </div>
-
-  <div class="content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-
-
-  <div class="submit">
-    <%= form.submit %>
-  </div>
-
-<% end %>
+</div>
