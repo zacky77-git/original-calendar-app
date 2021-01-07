@@ -2,11 +2,12 @@ class TargetsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # @user_target = UserTarget.find(params[:id])
-    # @user_target = UserTarget.all
-    @monthly_target = MonthlyTarget.all
-    @weekly_target = WeeklyTarget.all
-    @daily_target = DailyTarget.all
+    # @monthly_target = MonthlyTarget.where(month_id: Date.today.month)
+    # @weekly_target = WeeklyTarget.where(week_id: Date.today.cweek)
+    # @daily_target = DailyTarget.where(date_id: Date.today)
+    @monthly_target = MonthlyTarget.find_by(month_id: Date.today.month)
+    @weekly_target = WeeklyTarget.find_by(week_id: Date.today.cweek)
+    @daily_target = DailyTarget.find_by(date_id: Date.today)
   end
   
 
@@ -16,20 +17,36 @@ class TargetsController < ApplicationController
   end
   
   def create
-    # binding.pry
+
     @user_target = UserTarget.new(target_params)
     @user_target.save
     redirect_to targets_path
   end
   
   def edit
-    @user_target = UserTarget.find(params[:id])
-   
+ 
+    # @monthly_target = MonthlyTarget.where(month_id: Date.today.month)
+    # @weekly_target = WeeklyTarget.where(week_id: Date.today.cweek)
+    # @daily_target = DailyTarget.where(date_id: Date.today)
+    @monthly_target = MonthlyTarget.find_by(month_id: Date.today.month)
+    @weekly_target = WeeklyTarget.find_by(week_id: Date.today.cweek)
+    @daily_target = DailyTarget.find_by(date_id: Date.today)
   end
   
   def update
-    @user_target = UserTarget.find(params[:id])
-    @user_target.update(target_params) 
+    binding.pry
+    # @user_target = UserTarget.find(params[:id])
+    # @user_target.update(target_params) 
+    
+    # @monthly_target = MonthlyTarget.where(month_id: Date.today.month)
+    # @weekly_target = WeeklyTarget.where(week_id: Date.today.cweek)
+    # @daily_target = DailyTarget.where(date_id: Date.today)
+    @monthly_target = MonthlyTarget.find_by(month_id: Date.today.month)
+    @weekly_target = WeeklyTarget.find_by(week_id: Date.today.cweek)
+    @daily_target = DailyTarget.find_by(date_id: Date.today)
+    @monthly_target.update(target_params) 
+    @weekly_target.update(target_params) 
+    @daily_target.update(target_params) 
     redirect_to targets_path
   end
   
@@ -37,7 +54,7 @@ class TargetsController < ApplicationController
   private
 
   def target_params
-    params.require(:user_target).permit(:monthly_content, :weekly_content, :daily_content).merge(user_id: current_user.id, date: Date.today)
+    params.require(:user_target).permit(:monthly_content, :weekly_content, :daily_content).merge(user_id: current_user.id, date_id: Date.today, week_id: Date.today.cweek, month_id: Date.today.month)
   end
 
 

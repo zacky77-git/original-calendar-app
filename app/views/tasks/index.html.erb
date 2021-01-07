@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="side-bar">
-    <%= render "events/side_bar" %>
+    <%= render "top/side_bar" %>
   </div>
   <div class="chat">
     <div class="chat-header">
@@ -18,17 +18,9 @@
 
     <table>
       <tr>
-        <th>完了/</th><th>タイトル/</th><th>内容/</th><th>締め切り</th><th></th><th></th>
+        <th>完了</th><th>/タイトル</th><th>/内容</th><th>/締め切り</th><th></th><th></th>
       </tr>
       <% @tasks.each do |task| %>
-        <tr>
-          <td><%#= task.id %></td>
-          <td><%#= task.title %></td>
-          <td><%#= task.description %></td>
-          <td><%#= link_to 'Show', task_path(task) %></td>
-          <td><%#= link_to 'Edit', edit_task_path(task) %></td>
-          <td><%#= link_to 'Delete', task_path(task), method: :delete %></td>
-        </tr>
         <div>
           <tr>
             <td><%= check_box_tag :completed %></td>

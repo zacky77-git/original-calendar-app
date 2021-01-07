@@ -1,9 +1,6 @@
 class DiaryController < ApplicationController
   def index
-    @diaries = Diary.all
-    # 新しい順で5件
-    @index_diaries = Diary.where('start_time <= ?', Date.today).order('start_time ASC').limit(5)
-    # @index_events = Event.where('start_time >= ?', Date.today).order('start_time ASC').limit(5)
+    @diaries = Diary.where(user_id: current_user.id)
     @diary = Diary.new
   end
 

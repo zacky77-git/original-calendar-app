@@ -25,27 +25,27 @@
 
   <br>
   <div>
-    <%  @monthly_target.each do |monthly_target| %>
-    <th>今月の目標</th>
-    <td><%= monthly_target.monthly_content %></td>
-    <td><%= link_to 'Edit', edit_target_path(monthly_target.id) %></td>
-    <% end %>
+    <%#  @monthly_target.each do |monthly_target| %>
+    <%# <th>今月の目標</th> %>
+    <td><%#= monthly_target.monthly_content %></td>
+    <td><%#= link_to 'Edit', edit_target_path(monthly_target.id) %></td>
+    <%# end %>
   </div>
 
   <div>
-    <%  @weekly_target.each do |weekly_target| %>
-    <th>今週の目標</th>
-    <td><%= weekly_target.weekly_content %></td>
-    <td><%= link_to 'Edit', edit_target_path(weekly_target.id) %></td>
-    <% end %>
+    <%#  @weekly_target.each do |weekly_target| %>
+    <%# <th>今週の目標</th> %>
+    <td><%#= weekly_target.weekly_content %></td>
+    <td><%#= link_to 'Edit', edit_target_path(weekly_target.id) %></td>
+    <%# end %>
   </div>
 
   <div>
-    <% @daily_target.each do |daily_target| %>
-    <th>今日の目標</th>
-    <td><%= daily_target.daily_content %></td>
-    <td><%= link_to 'Edit', edit_target_path(daily_target.id) %></td>
-    <% end %>
+    <%# @daily_target.each do |daily_target| %>
+    <%# <th>今日の目標</th> %>
+    <td><%#= daily_target.daily_content %></td>
+    <td><%#= link_to 'Edit', edit_target_path(daily_target.id) %></td>
+    <%# end %>
   </div>
 
   
