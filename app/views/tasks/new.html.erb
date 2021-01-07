@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="side-bar">
-    <%= render "events/side_bar" %>
+    <%= render "top/side_bar" %>
   </div>
   <div class="chat">
     <div class="chat-header">
@@ -17,15 +17,17 @@
     </div>
 
 
-    <div style="width: 300px;">
+    <div class=”form-group”, style="width: 300px;">
+    <%# <div class=”form-group”> %>
       <%= form_for(@task) do |f| %>
       <div>
         <%= f.label :title %>
-        <%= f.text_field :title, size: 50 %>
+        <%#= f.text_field :title, size: 50 %>
+        <%= f.text_field :title, class:'form-control' %>
       </div>
       <div>
         <%= f.label :description %>
-        <%= f.text_area :description %>
+        <%= f.text_area :description, class:'form-control' %>
       </div>
       <div>
         <%= f.label :target_at %>
