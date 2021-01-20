@@ -62,39 +62,5 @@
 
 - belongs_to :user
 
-## monthly_targets テーブル
 
-| Orders  | Type       | Options                        |
-| --------| ---------- | ------------------------------ |
-| content | string     | null: false                    |
-| user    | references | null: false, foreign_key: true |
-| date    | date       | null: false                    |
-
-### Association
-
-- belongs_to :user
-
-## weekly_targets テーブル
-
-| Orders   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| content  | string     | null: false                    |
-| user     | references | null: false, foreign_key: true |
-| date     | date       | null: false                    |
-
-### Association
-
-- belongs_to :user
-
-## daily_targets テーブル
-
-| Orders    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| content   | string     | null: false                    |
-| user      | references | null: false, foreign_key: true |
-| date      | date       | null: false                    |
-
-### Association
-
-- belongs_to :user
 
