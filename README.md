@@ -29,7 +29,7 @@
 
 
 データベース設計	
-/Users/miyazakiyuuta/プログラミング/projects/original-calendar-app/do.png- has_many :diaries
+![do-1](https://user-images.githubusercontent.com/74704546/105680175-b84d2880-5f32-11eb-8f1d-ebbf525e6d2e.png)
 
 
 
