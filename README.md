@@ -11,13 +11,18 @@
               
 実装した機能についてのGIFと説明	
 
-https://gyazo.com/681073d2be4c6be07eb653a9102ded0d
+[![Image from Gyazo](https://i.gyazo.com/681073d2be4c6be07eb653a9102ded0d.png)](https://gyazo.com/681073d2be4c6be07eb653a9102ded0d)
+
 トップページはこのように直近３日間の予定と期限の近い順でToDoが表示されます
 
-https://gyazo.com/95b83210be6929793e59c7b37f399a38
+
+[![Image from Gyazo](https://i.gyazo.com/95b83210be6929793e59c7b37f399a38.png)](https://gyazo.com/95b83210be6929793e59c7b37f399a38)
+
 予定を保存するページに関しては上に間近の予定５件を表示し、カレンダーの中には予定が表示されるようになっており、したに表示されているフォームから直接保存できるようになっています
 
-https://gyazo.com/4c39162483cce235ed7c649476269344
+
+[![Image from Gyazo](https://i.gyazo.com/4c39162483cce235ed7c649476269344.png)](https://gyazo.com/4c39162483cce235ed7c649476269344)
+
 日記機能に関しても同様にカレンダーに表示され、したのフォームから保存されます。
 カレンダーに表示されているタイトルをクリックすると詳細を見ることもできます。
 
